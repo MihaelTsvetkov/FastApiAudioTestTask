@@ -9,7 +9,6 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from models.audio import AudioFile
 from models.user import User
 
-MEDIA_ROOT = Path("media")
 
 
 async def save_audio_file(
@@ -20,7 +19,10 @@ async def save_audio_file(
 ) -> AudioFile:
     file_id = uuid.uuid4()
     extension = Path(file.filename).suffix
-    relative_path = MEDIA_ROOT / f"{file_id}{extension}"
+
+    relative_path = os.path.join("media", f"{filename}") 
+    
+    os.makedirs(os.path.dirname(relative_path), exist_ok=True)
 
     async with aiofiles.open(relative_path, "wb") as out_file:
         content = await file.read()
