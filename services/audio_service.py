@@ -2,6 +2,7 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
+import os
 import aiofiles
 from fastapi import UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
