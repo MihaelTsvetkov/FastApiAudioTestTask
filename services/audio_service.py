@@ -1,15 +1,13 @@
+import os
 import uuid
 from datetime import datetime, timezone
-from pathlib import Path
 
-import os
 import aiofiles
 from fastapi import UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from models.audio import AudioFile
 from models.user import User
-
 
 
 async def save_audio_file(
@@ -19,10 +17,8 @@ async def save_audio_file(
     session: AsyncSession
 ) -> AudioFile:
     file_id = uuid.uuid4()
-    extension = Path(file.filename).suffix
+    relative_path = os.path.join("media", filename)
 
-    relative_path = os.path.join("media", f"{filename}") 
-    
     os.makedirs(os.path.dirname(relative_path), exist_ok=True)
 
     async with aiofiles.open(relative_path, "wb") as out_file:
@@ -42,3 +38,4 @@ async def save_audio_file(
     await session.refresh(audio)
 
     return audio
+
