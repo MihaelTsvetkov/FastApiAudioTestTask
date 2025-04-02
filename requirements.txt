@@ -4,7 +4,7 @@ asyncpg
 sqlalchemy>=2.0
 alembic
 
-pydantic>=2.0
+pydantic[email]
 pydantic-settings>=2.0
 
 python-jose[cryptography]
