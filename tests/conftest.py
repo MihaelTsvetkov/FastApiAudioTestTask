@@ -10,6 +10,8 @@ _test_settings = Settings(
     POSTGRES_DB="test_db",
     JWT_SECRET_KEY="TEST_SUPERSECRET",
     JWT_ALGORITHM="HS256",
+    YANDEX_CLIENT_ID="dummy_client_id",        
+    YANDEX_CLIENT_SECRET="dummy_client_secret"
 )
 config.get_settings.cache_clear()
 config.get_settings = lambda: _test_settings
