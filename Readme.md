@@ -9,7 +9,7 @@
 ### 1. Клонируйте репозиторий
 
 ```
-git clone https://github.com/your-username/your-audio-app.git
+git clone https://github.com/MihaelTsvetkov/FastApiAudioTestTask.git
 cd your--app
 ```
 
@@ -115,7 +115,7 @@ file: файл
 пример json тела
 ```
 {
-  "refresh_token": "ваш refresh токен
+  "refresh_token": "ваш refresh токен"
 
 }
 ```
@@ -124,7 +124,7 @@ file: файл
 
 ```
 {
-    "access_token": "access_token
+    "access_token": "access_token"
     "token_type": "bearer"
 }
 ```
