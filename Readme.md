@@ -26,6 +26,7 @@ POSTGRES_PASSWORD=пароль
 YANDEX_CLIENT_ID=ваш_client_id
 YANDEX_CLIENT_SECRET=ваш_client_secret
 ```
+**Важно! В вашем яндекс приложении обязательно укажите, что предоставляете доступ к email пользователя**
 
 ### 3. Соберите и запустите проект
 ```
