@@ -201,7 +201,9 @@ Authorization: Bearer <superuser_api_key>
 пример json body: 
 
 ```
-Изменить данные о пользователе (почта, is_superuser) по его ID.
+{
+    "email": "newemail@example.com",
+}
 ```
 
 Ответ: Пользователь с новыми данными
