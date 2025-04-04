@@ -23,6 +23,11 @@ POSTGRES_DB=имя базы
 POSTGRES_USER=пользователь
 POSTGRES_PASSWORD=пароль
 
+JWT_SECRET_KEY=ключ
+JWT_ALGORITHM=алгоритм
+ACCESS_TOKEN_EXPIRE_MINUTES=время жизни access токена
+REFRESH_TOKEN_EXPIRE_DAYS=время жизни refresh токена
+
 YANDEX_CLIENT_ID=ваш_client_id
 YANDEX_CLIENT_SECRET=ваш_client_secret
 ```
